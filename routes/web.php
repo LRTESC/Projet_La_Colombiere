@@ -13,7 +13,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* old version
 Route::get('/', function () {
 //    return view('welcome');
     return view("m_new_page");
+});*/
+
+/* Home */
+Route::get('/', function () {
+    return view("home");
+});
+
+/* Product */
+Route::get('/product', function () {
+    return view("product");
+});
+
+/* Product ID */
+Route::get('/product/{id}', function ($id) {
+
+    return view("product",[
+        'id' => $id
+    ]);
+})->whereNumber('id');
+
+/* Cart */
+Route::get('/cart', function () {
+    return view("cart");
 });
