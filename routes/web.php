@@ -21,18 +21,17 @@ Route::get('/', function () {
 
 /* Home */
 Route::get('/', function () {
-    return view("home");
+    return view("homepage");
 });
 
 /* Product */
 Route::get('/product', function () {
-    return view("product");
+    return view("product-list");
 });
 
 /* Product ID */
 Route::get('/product/{id}', function ($id) {
-
-    return view("product",[
+    return view("product-details",[
         'id' => $id
     ]);
 })->whereNumber('id');
