@@ -1,0 +1,21 @@
+body {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1;
+}
+h1,h2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.stepped-progress__item {
+    background: #f4f4f4;
+    background-image: url("../pictures/checkout.webp");
+    height: 100vh;
+}
+.cart{
+    flex-wrap: wrap;
+    max-width: 100rem;
+}
