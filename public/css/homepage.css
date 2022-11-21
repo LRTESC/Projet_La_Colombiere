@@ -1,0 +1,34 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+.topbar{
+    position: relative;
+    z-index: 11;
+    width: 100vw;
+    overflow: visible;
+    transform: translateY(0);
+    transition: all .3s ease-out;
+}
+.topbar_wrapper{
+    position: relative;
+    padding: 1rem 3.75rem;
+}
+.logo{
+    width: 7.8125rem;
+    height: 1rem;
+}
+.menu span{
+    margin: 0 1.25rem;
+    width: auto;
+}
+.icons-left{
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 1%;
+    height: 100%;
+    font-weight: 700;
+    font-size: .75rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+}
