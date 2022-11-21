@@ -1,0 +1,35 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+}
+
+.item1 {
+    text-align: center;
+    background: grey;
+    width: auto;
+
+}
+
+.item2 {
+    text-align: center;
+    background: #ff4343;
+    width: auto;
+
+}
+
+.item3 {
+    text-align: center;
+    background: #1d90ff;
+    width: auto;
+
+}
+
+.left {
+
+}
+

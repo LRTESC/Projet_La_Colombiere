@@ -1,0 +1,61 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #979797;
+    font-family: "Roboto bold", serif;
+    font-size: 14px;
+}
+
+
+.link-top-product {
+    text-decoration: none;
+    color: #979797;
+}
+
+.twic-poster-done{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 702px;
+    width: 100%;
+}
+
+.container-b1{
+    margin-top: 735px;
+    margin-left: 150px;
+}
+
+.container-b2{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.container-b3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.title-product-1{
+    font-size: 48px;
+}
+
+.title-product-2{
+    font-size: 44px;
+    font-family: "Roboto Light", sans-serif;
+}
+
+.title-product-3 {
+    font-size: 32px;
+}
+
+.p-product-1{
+    font-size: 16px;
+}
