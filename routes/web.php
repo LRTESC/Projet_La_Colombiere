@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,30 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* old version
-Route::get('/', function () {
-//    return view('welcome');
-    return view("m_new_page");
-});*/
-
 /* Home */
-Route::get('/', function () {
-    return view("homepage");
-});
+Route::get('/',[HomeController::class, 'show']);
 
 /* Product */
-Route::get('/product', function () {
-    return view("product-list");
-});
+Route::get('/product',[ProductController::class, 'show']);
 
 /* Product ID */
-Route::get('/product/{id}', function ($id) {
-    return view("product-details",[
-        'id' => $id
-    ]);
-})->whereNumber('id');
+Route::get('/product/{id}',[ProductController::class, 'id']);
 
 /* Cart */
-Route::get('/cart', function () {
-    return view("cart");
-});
+Route::get('/cart',[CartController::class, 'show']);
