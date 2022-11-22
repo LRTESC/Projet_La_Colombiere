@@ -1,0 +1,68 @@
+/* Footer */
+/* Row1 contact */
+.container-fluid{
+    padding: 0 !important;
+}
+.contact-info{
+    margin: 0 !important;
+    padding: 5em !important;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact-info p{
+    width: auto;
+    padding: 0 !important;
+    cursor: pointer;
+}
+.contact-info img {
+    margin: 0 1em;
+    height: 24px;
+    cursor: pointer;
+}
+/* Row2 links */
+.link_info{
+    padding: 5em !important;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.info-column{
+    width: 25% !important;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.info-column h2{
+    font-weight: 900;
+    font-size: 1.2em;
+    margin: 1rem 0;
+}
+.info-column h4{
+    font-weight: 400;
+    font-size: 1em;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+/* Row3 CGU */
+.cgu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5em;
+    color: white;
+}
+.cgu img{
+    filter: invert(1);
+    height: 24px;
+    cursor: pointer;
+}
+.cgu p{
+    margin: 0 .5em;
+    cursor: pointer;
+}
+.cgu .i_link img{
+    margin: 0 .5em;
+    cursor: pointer;
+}
