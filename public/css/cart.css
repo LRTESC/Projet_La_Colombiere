@@ -52,6 +52,7 @@ div {
 .logo {
     height: 1.25rem;
     margin: 35px 0;
+    filter: invert(0);
 }
 .panier{
     display: flex;
