@@ -1,13 +1,16 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+/* navbar */
 .topbar{
     position: relative;
     z-index: 11;
     width: 100vw;
+    margin-top: 1rem;
     overflow: visible;
     transform: translateY(0);
     transition: all .3s ease-out;
+    color: white;
 }
 .topbar_wrapper{
     position: relative;
@@ -16,19 +19,208 @@
 .logo{
     width: 7.8125rem;
     height: 1rem;
+    filter: invert(1);
+    cursor: pointer;
 }
 .menu span{
     margin: 0 1.25rem;
     width: auto;
+    cursor: pointer;
 }
 .icons-left{
+    cursor: pointer;
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
-    width: 1%;
-    height: 100%;
     font-weight: 700;
-    font-size: .75rem;
-    line-height: 1rem;
     text-transform: uppercase;
+    margin-right: 3%;
+}
+.icons-left img {
+    margin: 0 1rem;
+    height: 24px;
+    filter: invert(1);
+}
+/* Row Hero */
+.hero{
+    height: calc(100vh - 4.5rem);
+    padding: 3.75rem !important;
+}
+.hero_media{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 !important;
+}
+.media-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.media-item div{
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero_wrapper{
+    display: flex;
+    z-index: 1;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 35px;
+    height: 100%;
+}
+.hero_title{
+    font-weight: 300;
+    line-height: 1;
+}
+.h1{
+    color: white;
+    margin: 0;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+}
+.hero__titles__title{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.hero__titles__subtitle{
+    margin-top: .625rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+.hero_btn{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: auto;
+    min-width: 10rem;
+    border: white 2px solid;
+    border-radius: 5px;
+    padding: .7rem 1rem;
+}
+.hero_btn span{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: .5px;
+    align-items: center;
+    justify-content: center;
+}
+/* row Devialet mania*/
+.DevialetMania_wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 4rem 5em !important;
+}
+.img_container{
+    height: 100vh;
+    width: 50vw;
+}
+.img_container img{
+    height: 90%;
+    border-radius: 7px;
+}
+.D_mania_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4rem;
+}
+.D_mania_text h2{
+    font-size: 4rem;
+    font-weight: 900;
+}
+.D_mania_text p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1.25rem;
+}
+.D_mania_text h4{
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 1.25rem;
+}
+/* Footer */
+/* Row1 contact */
+.container-fluid{
+    padding: 0 !important;
+}
+.contact-info{
+    margin: 0 !important;
+    padding: 5em !important;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact-info p{
+    width: auto;
+    padding: 0 !important;
+    cursor: pointer;
+}
+.contact-info img {
+    margin: 0 1em;
+    height: 24px;
+    cursor: pointer;
+}
+/* Row2 links */
+.link_info{
+    padding: 5em !important;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.info-column{
+    width: 25% !important;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.info-column h2{
+    font-weight: 900;
+    font-size: 1.2em;
+    margin: 1rem 0;
+}
+.info-column h4{
+    font-weight: 400;
+    font-size: 1em;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+/* Row3 CGU */
+.cgu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5em;
+    color: white;
+}
+.cgu img{
+    filter: invert(1);
+    height: 24px;
+    cursor: pointer;
+}
+.cgu p{
+    margin: 0 .5em;
+    cursor: pointer;
+}
+.cgu .i_link img{
+    margin: 0 .5em;
+    cursor: pointer;
 }
