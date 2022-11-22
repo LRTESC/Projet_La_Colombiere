@@ -1,44 +1,39 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <!-- CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <!-- JavaScript -->
-    <!-- bootstrap -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="d-flex align-items-center justify-content-between topbar">
-        <div class="topbar_wrapper justify-content-between">
-            <img class="logo" alt="logo devialet" src="{{asset('pictures/svg-0.svg')}}">
+@include('includes.head')
+@include('includes.header')
+<div class="container-fluid">
+    <div class="row hero">
+        <div class="hero_media">
+            <div class="media-item">
+                <div
+                    style="background-image: url('{{asset('storage/pictures/Hero100_Phantom_Gold_Refurbished_desktop.webp')}}')">
+                </div>
+            </div>
         </div>
-        <div class="menu justify-space-between">
-            <span>Enceintes</span>
-            <span>Enceintes portables</span>
-            <span>Barre de son</span>
-            <span>Ecouteurs</span>
-            <span>Amplificateurs</span>
-            <span>Cadeaux</span>
+        <div class="hero_wrapper">
+            <div class="hero_title">
+                <h1 class="h1">
+                    <span class="hero__titles__title">Phantom reconditionné</span>
+                    <br>
+                    <span class="hero__titles__subtitle">Cercle vertueux.</span>
+                </h1>
+            </div>
+            <div class="hero_btn">
+                <span>Découvrir</span>
+            </div>
         </div>
-        <div class="icons-left">
-            <img alt="account" src="{{asset('pictures/svg-1.svg')}}">
-            <img alt="map" src="{{asset('pictures/svg-2.svg')}}">
-            <img alt="cart" src="{{asset('pictures/svg-3.svg')}}">
+    </div>
+    <div class="row">
+        <div class="DevialetMania_wrapper">
+            <div class="img_container">
+                <img alt="Devialet media" src="{{asset('storage/pictures/KV_Diablo_Lifestyle_2000x2000.webp')}}"/>
+            </div>
+            <div class="D_mania_text">
+                <h2>Devialet Mania.</h2>
+                <p>La première enceinte stéréo portable haute-fidélité de Devialet, embarque notre obsession du son pur
+                    dans tous vos moments de vie.</p>
+                <h4>Découvrir ></h4>
+            </div>
         </div>
-    </header>
-
-</body>
-</html>
+    </div>
+</div>
+@include('includes.footer')
