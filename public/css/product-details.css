@@ -25,6 +25,11 @@ body {
 
 }
 
+.item1 img {
+
+    border-radius: 20px;
+}
+
 .item2 {
     text-align: center;
     background: #F4F4F4;
@@ -35,12 +40,12 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: #1d90ff;
+    background: #F4F4F4;
     width: 50%;
 }
 
 .mid {
-    background: grey;
+    background: white;
     display: flex;
     width: 100%;
     /*padding: 3rem;*/
@@ -64,6 +69,7 @@ body {
     overflow: auto;
     flex-direction: column;
     padding: 19px;
+
 }
 
 .FlexContainer div {
@@ -73,14 +79,38 @@ body {
 }
 
 .panier {
+    color: white;
+    background: black;
     justify-content: stretch;
     width: auto;
+    border-radius: 30px;
 }
 
 .mono-stereo {
     display: flex;
-    justify-content: space-evenly;
     margin: 0px;
     padding: 0px;
 
+}
+.mono-stereo button {
+    background:white;
+    background-color:white;
+    border-radius:5px;
+    border:1px solid black;
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-family:Arial;
+    font-size:16px;
+    font-weight:bold;
+    padding:11px 23px;
+    text-decoration:none;
+}
+
+.mono-stereo button:hover {
+
+}
+.mono-stereo button:active {
+    position:relative;
+    top:1px;
 }
