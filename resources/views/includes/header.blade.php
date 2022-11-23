@@ -3,7 +3,9 @@
         <img class="logo" alt="logo devialet" src="{{asset('storage/pictures/svg-0.svg')}}"/>
     </div>
     <div class="menu justify-space-between">
-        <span>Enceintes</span>
+        <a href="{{url("/product")}}">
+            <span>Enceintes</span>
+        </a>
         <span>Enceintes portables</span>
         <span>Barre de son</span>
         <span>Ecouteurs</span>

@@ -1,7 +1,7 @@
 /* Row Hero */
 .hero{
     height: calc(100vh - 4.5rem);
-    padding: 3.75rem !important;
+    padding: 3.75rem;
 }
 .hero_media{
     position: absolute;
@@ -9,7 +9,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 0 !important;
+    padding: 0;
 }
 .media-item {
     width: 100%;
@@ -81,7 +81,7 @@
 .DevialetMania_wrapper{
     display: flex;
     flex-wrap: nowrap;
-    padding: 4rem 5em !important;
+    padding: 4rem 5em;
 }
 .img_container{
     height: 100vh;

@@ -1,6 +1,18 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+a {
+    text-decoration: none;
+    color: white;
+    transition: all .1s ease-in-out;
+    border: 0px #F4F4F4 solid;
+    border-radius: 5px;
+}
+a:hover {
+    color: #F4F4F4;
+    border: 2px #F4F4F4 solid;
+    background-color: rgba(255, 255, 255, 0.3);
+}
 /* navbar */
 .topbar{
     position: relative;
