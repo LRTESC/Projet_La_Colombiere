@@ -14,9 +14,23 @@
     </div>
     <div class="panier_wrapper">
         <div class="products">
-
+            <div class="title_product">
+                <h2>VOTRE PANIER</h2>
+            </div>
         </div>
         <div class="options">
+            <div class="title_options">
+                <h2 class="syn">SYNTHESE</h2>
+            </div>
+            <div class="info_option">
+                <p>LIVRAISON OFFERTE</p>
+                <p>DATE DE LIVRAISON ESTIMÉE : 25 NOV. 2022</p>
+            </div>
+            <div class="total_command">
+                <p>TOTAL</p>
+                <button>COMMANDER</button>
+            </div>
+
 
         </div>
     </div>
