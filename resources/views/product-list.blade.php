@@ -132,7 +132,7 @@
                         2300€
                     </h4>
                     <div class="div-button">
-                        <button class="buy-button-product">ACHETER</button>
+                        <a href="{{url('product/phantom-i-103db')}}"><button class="buy-button-product">ACHETER</button></a>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@
                         3000€
                     </h4>
                     <div class="div-button">
-                        <button class="buy-button-product">ACHETER</button>
+                        <a href="{{url('product/phantom-i-108db')}}"><button class="buy-button-product">ACHETER</button></a>
                     </div>
                 </div>
             </div>
@@ -252,7 +252,7 @@
                         3600€
                     </h4>
                     <div class="div-button">
-                        <button class="buy-button-product">ACHETER</button>
+                        <a href="{{url('product/phantom-i-108db-opera')}}"><button class="buy-button-product">ACHETER</button></a>
                     </div>
                 </div>
             </div>
