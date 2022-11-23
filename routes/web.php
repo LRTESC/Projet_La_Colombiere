@@ -17,13 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* Home */
-Route::get('/',[HomeController::class, 'show']);
+Route::get('/',[HomeController::class, 'show'])->name('home');
 
 /* Product */
-Route::get('/product',[ProductController::class, 'show']);
+Route::get('/product',[ProductController::class, 'show'])->name('product');
 
 /* Product ID */
-Route::get('/product/{id}',[ProductController::class, 'id']);
+Route::get('/product/{id}',[ProductController::class, 'id'])->name('productid');
 
 /* Cart */
-Route::get('/cart',[CartController::class, 'show']);
+Route::get('/cart',[CartController::class, 'show'])->name('cart');

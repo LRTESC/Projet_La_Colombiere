@@ -17,7 +17,7 @@
                     <span class="hero__titles__subtitle">Cercle vertueux.</span>
                 </h1>
             </div>
-            <a href="{{url("/product")}}">
+            <a href="{{route("product")}}">
                 <div class="hero_btn">
                     <span>Découvrir</span>
                 </div>
