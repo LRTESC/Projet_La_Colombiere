@@ -1,10 +1,14 @@
+body {
+    background-color: #F4F4F4;
+}
+
 *{
     font-family: 'Roboto', sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: #979797;
+    color: #979797 ;
     font-family: "Roboto bold", serif;
     font-size: 14px;
 }
@@ -27,13 +31,14 @@ a {
 }
 
 .container-b1{
-    margin-top: 735px;
+    margin-top: 650px;
     margin-left: 150px;
 }
 
 .container-b2{
     margin-top: 100px;
     margin-left: 150px;
+    margin-bottom: 70px;
 }
 
 .container-b3{
@@ -58,4 +63,106 @@ a {
 
 .p-product-1{
     font-size: 16px;
+}
+
+.barrespec{
+    margin-top: 120px;
+}
+
+.implosivdiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.column-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.product-c-1{
+    margin-right: 50px;
+    background-color: #ffffff;
+}
+
+.product-c-2{
+    margin-right: 50px;
+    background-color: #ffffff;
+}
+
+
+.product-c-3{
+    background-color: #ffffff;
+}
+
+.title-product-btmp {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.title-product-perfspec{
+    font-size: 22px;
+    margin-top: 30px;
+    font-family: "Roboto bold", sans-serif;
+    font-weight: 700;
+}
+
+
+.spec-product{
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.img-space-product{
+    margin-left: 15px;
+}
+
+.product-d-1{
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.price-product-list{
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 75px;
+}
+
+.price-product-list2{
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.buy-button-product{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    width: 400px;
+    font-size: 12px;
+    font-family: "Roboto bold", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 10px;
+    border: 4px double black;
+}
+
+.div-button{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-space-around{
+    display: flex;
+    justify-content: center;
 }
