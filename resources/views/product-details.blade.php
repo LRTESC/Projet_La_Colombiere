@@ -3,8 +3,6 @@
 
 <h1>{{$id}}</h1>
 
-
-
 <div class="parent">
     <div class="item1">
         <div> <img src="{{asset('storage/pictures/image-carousel1.webp')}}"></div>

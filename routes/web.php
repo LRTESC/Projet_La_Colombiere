@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BDDBriceController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -27,3 +28,7 @@ Route::get('/product/{id}',[ProductController::class, 'id'])->name('productid');
 
 /* Cart */
 Route::get('/cart',[CartController::class, 'show'])->name('cart');
+
+/* Brice bdd */
+Route::get('/bdd-brice',[BDDBriceController::class, 'show'])->name('bddbrice');
+
