@@ -85,50 +85,9 @@
                             <h4 class="title-product-btmp">
                                 {{$product->Name}}
                             </h4>
-                            <h5 class="title-product-perfspec">
-                                Performances
-                            </h5>
-                            <h6 class="spec-product">
-                                Puissance totale d’amplification
-                            </h6>
-                            <p class="info-product">
-                                500 W RMS
-                            </p>
-                            <h6 class="spec-product">
-                                Réponse en fréquence (bande-passante)
-                            </h6>
-                            <p class="info-product">
-                                Bande passante: 16Hz à 25kHz (@-6dB)<br>
-                                Précision de la réponse en fréquence: ± 2dB de 20Hz<br>
-                                à 20kHz
-                            </p>
-                            <h6 class="spec-product">
-                                Niveau sonore maximal
-                            </h6>
-                            <p class="info-product">
-                                103 dB SPL à 1 mètre
-                            </p>
-                            <h5 class="title-product-perfspec">
-                                Spécifications
-                            </h5>
-                            <h6 class="spec-product">
-                                Haut-parleurs
-                            </h6>
-                            <p class="info-product">
-                                Haut-Parleur Tweeter à dôme aluminium<br>
-                                Haut-Parleur Medium à dôme aluminium<br>
-                                Haut-Parleurs Grave à dôme aluminium
-                            </p>
-                            <h6 class="spec-product">
-                                Finition
-                            </h6>
-                            <p class="info-product">
-                                Corps blanc RAL 9016<br>
-                                Flasques latérales en inox poli<br>
-                                Haut-parleurs de grave blanc RAL 9016
-                            </p>
+                            {!! $product->Description !!}
                             <h4 class="price-product-list">
-                                {{$product->Price}}
+                                {{$product->Price . ' €'}}
                             </h4>
                             <div class="div-button">
                                 <a href="{{route('productid',['id' => $product->idProduct])}}"><button class="buy-button-product">ACHETER</button></a>
