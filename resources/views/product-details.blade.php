@@ -4,7 +4,6 @@
 <h1>{{$id}}</h1>
 
 
-
 <div class="parent">
     <div class="item1">
         <div> <img src="{{asset('storage/pictures/image-carousel1.webp')}}"></div>
@@ -38,3 +37,8 @@
 
 
 @include('includes.footer')
+
+<span>{{\Illuminate\Support\Facades\DB::table('Product')->where('idProduct', 1)->first()->Name}}</span>
+
+
+

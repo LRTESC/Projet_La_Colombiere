@@ -12,9 +12,6 @@ class ProductController extends Controller
     }
     public function id($id)
     {
-            return view("product-details",[
-                'id' => $id,
-                'css' => 'product-details'
-            ]);
+            return view("product-details",['id' => $id, 'css' => 'product-details']);
     }
 }
