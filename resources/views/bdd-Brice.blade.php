@@ -8,10 +8,10 @@
     <title>Brice bdd</title>
 
     @foreach($products as $product)
-        <h1>{{ $product->Name }}</h1>
-        <h3>{{$product->Description}}</h3>
-        <p>Quantité : {{$product->Stock}}</p>
-        <p>{{$product->Price}} €</p>
+        <h1>{{ $product->name }}</h1>
+        <h3>{{$product->description}}</h3>
+        <p>Quantité : {{$product->available}}</p>
+        <p>{{$product->price}} €</p>
     @endforeach
 </head>
 <body>

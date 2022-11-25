@@ -30,5 +30,7 @@ Route::get('/product/{id}',[ProductController::class, 'id'])->name('productid');
 Route::get('/cart',[CartController::class, 'show'])->name('cart');
 
 /* Brice bdd */
-Route::get('/bdd-brice',[BDDBriceController::class, 'show'])->name('bddbrice');
+Route::get('/bdd-b',[BDDBriceController::class, 'show'])->name('bddbrice');
+Route::get('/bdd-b-name',[BDDBriceController::class, 'showName'])->name('bddbrice-name');
+Route::get('/bdd-b-price',[BDDBriceController::class, 'showPrice'])->name('bddbrice-price');
 

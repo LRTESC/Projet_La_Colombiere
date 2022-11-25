@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Product;
 
 class BDDBriceController extends Controller
 {
@@ -11,7 +11,21 @@ class BDDBriceController extends Controller
     {
 
         return view("bdd-Brice", [
-            'products'=> DB::select('select * from Product')
+            'products' => Product::all()
+        ]);
+    }
+    public function showName()
+    {
+
+        return view("bdd-Brice", [
+            'products' => Product::all()->sortBy('name')
+        ]);
+    }
+    public function showPrice()
+    {
+
+        return view("bdd-Brice", [
+            'products' => Product::all()->sortBy('price')
         ]);
     }
 }

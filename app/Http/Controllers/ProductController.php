@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -10,7 +11,7 @@ class ProductController extends Controller
     {
             return view("product-list",['css' => 'product-list']);
     }
-    public function id($id)
+    public function id(Product $id)
     {
             return view("product-details",[
                 'id' => $id,
