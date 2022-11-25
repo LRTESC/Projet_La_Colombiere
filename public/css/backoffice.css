@@ -1,0 +1,48 @@
+/* unspecific */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    width: 100vw;
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    border: none;
+    background: none;
+}
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* specific */
+.products_table {
+    margin: auto;
+    width: 80%;
+    border: #232323 2px solid;
+}
+
+.products_table > * {
+    border: #232323 1px solid;
+}
+
+.products_th {
+    background-color: #232323;
+    color: white;
+}
+
+.products_td tr:nth-child(odd) {
+    background-color: #EEEEEE;
+}
+
+.products_td tr td img {
+    height: 2em;
+    width: 2em;
+
+}
+.products_td tr td img:hover {
+    filter: invert(0.5);
+}
+

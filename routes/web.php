@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BackofficeController;
 use App\Http\Controllers\BDDBriceController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
@@ -33,4 +34,7 @@ Route::get('/cart',[CartController::class, 'show'])->name('cart');
 Route::get('/bdd-b',[BDDBriceController::class, 'show'])->name('bddbrice');
 Route::get('/bdd-b-name',[BDDBriceController::class, 'showName'])->name('bddbrice-name');
 Route::get('/bdd-b-price',[BDDBriceController::class, 'showPrice'])->name('bddbrice-price');
+
+/* Backoffice */
+Route::get('/backoffice',[BackofficeController::class, 'index'])->name('backoffice');
 
