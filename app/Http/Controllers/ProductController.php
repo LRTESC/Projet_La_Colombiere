@@ -10,6 +10,7 @@ class ProductController extends Controller
     {
             return view("product-list",['css' => 'product-list']);
     }
+
     public function id($id)
     {
             return view("product-details",[

@@ -139,11 +139,13 @@ div {
 }
 
 .info_option{
+    font-weight: 500;
     padding: 2rem;
     height: 45%;
 }
 
 .total_command{
+    font-weight: 500;
     padding: 2rem;
     background: #f1f1f1;
     height: 45%;
