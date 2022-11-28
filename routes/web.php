@@ -2,7 +2,6 @@
 
 use \App\Http\Controllers\Backoffice;
 use App\Http\Controllers\Backoffice\BackofficeController;
-use App\Http\Controllers\BDDBriceController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -30,11 +29,6 @@ Route::get('/product/{id}', [ProductController::class, 'id'])->name('productid')
 
 /* Cart */
 Route::get('/cart', [CartController::class, 'show'])->name('cart');
-
-/* Brice bdd */
-Route::get('/bdd-b', [BDDBriceController::class, 'show'])->name('bddbrice');
-Route::get('/bdd-b-name', [BDDBriceController::class, 'showName'])->name('bddbrice-name');
-Route::get('/bdd-b-price', [BDDBriceController::class, 'showPrice'])->name('bddbrice-price');
 
 /* Backoffice */
 Route::prefix('/backoffice')
