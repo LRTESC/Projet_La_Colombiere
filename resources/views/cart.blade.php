@@ -17,17 +17,40 @@
             <div class="title_product">
                 <h2>VOTRE PANIER</h2>
             </div>
+            <table>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prix Unitaire</th>
+                    <th>Quantité</th>
+                    <th>Sous-total</th>
+                </tr>
+                @foreach ($cart['products'] as $product)
+                    <tr>
+                        <td>{{$product->Name}}</td>
+                        <td>{{$product->Price}}</td>
+                        <td>{{$product->Quantity}}</td>
+                        <td>{{$product->Price * $product->Quantity}}</td>
+                    </tr>
+                @endforeach
+            </table>
         </div>
         <div class="options">
             <div class="title_options">
                 <h2 class="syn">SYNTHESE</h2>
             </div>
             <div class="info_option">
+
+                <p>{{$customer->firstname}} {{$customer->lastname}}</p>
+                <p>{{$customer->Adress}}</p>
+
                 <p>LIVRAISON OFFERTE</p>
                 <p>DATE DE LIVRAISON ESTIMÉE : 25 NOV. 2022</p>
             </div>
             <div class="total_command">
-                <p>TOTAL</p>
+                <p>TOTAL HT : {{ $cart['total_ht'] }}</p>
+                <p>TVA : {{ $cart['total_tva'] }}</p>
+                <p>TOTAL TTC : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>
+
                 <button>COMMANDER</button>
             </div>
 

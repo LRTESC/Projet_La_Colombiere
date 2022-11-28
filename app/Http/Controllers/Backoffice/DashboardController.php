@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Backoffice;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-
-class DashboardController extends BackofficeController
+class DashboardController extends BackOfficeController
 {
-    //
+    public function index()
+    {
+        return view('backoffice.dashboard.index');
+    }
 }
