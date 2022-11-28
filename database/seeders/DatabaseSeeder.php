@@ -3,11 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
-
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,8 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       $this->call([
-           ProductSeeder::class
-         ]);
+        User::truncate();
+        Product::truncate();
+
+        User::factory(5)->create();
+
+        Product::factory(5)->create();
     }
 }
