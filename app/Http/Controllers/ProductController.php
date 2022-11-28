@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -16,7 +17,7 @@ class ProductController extends Controller
             'products' => $products
         ]);
     }
-    public function id($id)
+    public function id(Product $id)
     {
             return view("product-details",[
                 'id' => $id,
