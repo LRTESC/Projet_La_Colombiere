@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
         Product::truncate();
 
         Product::factory()
-            ->count(50)
+            ->count(100)
             ->create();
     }
 }

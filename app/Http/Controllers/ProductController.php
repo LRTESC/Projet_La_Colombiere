@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\List_;
+use function Sodium\add;
 
 class ProductController extends Controller
 {
-    public function show()
+    public function index()
     {
-            return view("product-list",['css' => 'product-list']);
-    }
 
-    public function id($id)
-    {
-            return view("product-details",[
-                'id' => $id,
-                'css' => 'product-details'
-            ]);
+        $products = Product::query()
+            ->limit(50)
+            ->get();
+
+
+        return view("products.index", ['Products' => '$products']);
     }
 }
+
