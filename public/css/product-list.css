@@ -83,18 +83,18 @@ a {
     margin-bottom: 60px;
 }
 
-.product-c-1{
+.product-c:first-child{
     margin-right: 50px;
     background-color: #ffffff;
 }
 
-.product-c-2{
+.product-c{
     margin-right: 50px;
     background-color: #ffffff;
 }
 
 
-.product-c-3{
+.product-c:last-child{
     background-color: #ffffff;
 }
 
