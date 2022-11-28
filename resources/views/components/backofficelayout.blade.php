@@ -28,7 +28,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-{{ $content }}
+{{ $slot }}
 </body>
 </html>
 

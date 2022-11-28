@@ -2,19 +2,30 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
 body {
     width: 100vw;
 }
+
 a {
     text-decoration: none;
+    color: #232323;
 }
-a:hover{
+
+a:hover {
     border: none;
     background: none;
 }
+
 table.center {
     margin-left: auto;
     margin-right: auto;
+}
+
+button {
+    border: none;
+    border-radius: 10%;
+    background: #232323;
 }
 
 /* specific */
@@ -38,11 +49,15 @@ table.center {
 }
 
 .products_td tr td img {
-    height: 2em;
-    width: 2em;
-
+    height: 24px;
+    filter: invert(1);
 }
+
 .products_td tr td img:hover {
     filter: invert(0.5);
 }
 
+tfoot img {
+    height: 24px;
+    filter: invert(1);
+}
