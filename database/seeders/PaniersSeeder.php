@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-
-use App\Models\Product;
+use App\Models\Panier;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ProductSeeder extends Seeder
+class PaniersSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +15,8 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        Product::truncate();
+        Panier::truncate();
 
-        Product::factory()
-            ->count(100)
-            ->create();
+        Panier::factory(5)->create();
     }
 }
