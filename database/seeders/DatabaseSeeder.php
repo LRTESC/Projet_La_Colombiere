@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Product;
 use Illuminate\Database\Seeder;
 
@@ -18,6 +17,8 @@ class DatabaseSeeder extends Seeder
         Product::truncate();
 
         Product::factory(5)->create();
-
+        $this->call([
+            CategoriesSeeder::class,
+        ]);
     }
 }

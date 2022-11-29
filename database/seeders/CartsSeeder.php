@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Panier;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Cart;
 use Illuminate\Database\Seeder;
 
-class PaniersSeeder extends Seeder
+class CartsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,8 +14,8 @@ class PaniersSeeder extends Seeder
      */
     public function run()
     {
-        Panier::truncate();
+        Cart::truncate();
 
-        Panier::factory(5)->create();
+        Cart::factory(5)->create();
     }
 }

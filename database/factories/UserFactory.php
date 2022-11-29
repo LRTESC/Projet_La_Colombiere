@@ -2,11 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Faker;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Users>
+ * @extends Factory<User>
  */
 class UsersFactory extends Factory
 {

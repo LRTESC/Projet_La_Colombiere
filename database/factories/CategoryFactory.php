@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Paniers>
+ * @extends Factory<Category>
  */
-class PaniersFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,9 @@ class PaniersFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake()->word,
+            'slug' => fake()->slug,
+            'description' => fake()->paragraph
         ];
     }
 }

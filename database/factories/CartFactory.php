@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Cart;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categories>
+ * @extends Factory<Cart>
  */
-class CategoriesFactory extends Factory
+class CartFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +18,7 @@ class CategoriesFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->word,
-            'slug' => fake()->slug,
-            'description' => fake()->paragraph
+            //
         ];
     }
 }

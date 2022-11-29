@@ -2,8 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Categorie;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class CategoriesSeeder extends Seeder
@@ -15,8 +14,8 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        Categorie::truncate();
+        Category::truncate();
 
-        Categorie::factory(5)->create();
+        Category::factory(5)->create();
     }
 }

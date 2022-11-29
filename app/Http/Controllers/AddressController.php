@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AddressesController extends Controller
+class AddressController extends Controller
 {
     //
 }

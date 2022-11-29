@@ -2,8 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Addresse;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Address;
 use Illuminate\Database\Seeder;
 
 class AddressesSeeder extends Seeder
@@ -15,8 +14,8 @@ class AddressesSeeder extends Seeder
      */
     public function run()
     {
-        Addresse::truncate();
+        Address::truncate();
 
-        Addresse::factory(5)->create();
+        Address::factory(5)->create();
     }
 }
