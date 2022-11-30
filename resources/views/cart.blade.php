@@ -24,7 +24,8 @@
                     <th>Quantité</th>
                     <th>Sous-total</th>
                 </tr>
-                @foreach ($cart['products'] as $product)
+                @dd($carts[0])
+            @foreach ($carts[0] as $product)
                     <tr>
                         <td>{{$product->Name}}</td>
                         <td>{{$product->Price}}</td>

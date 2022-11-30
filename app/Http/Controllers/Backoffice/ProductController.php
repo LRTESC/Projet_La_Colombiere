@@ -46,7 +46,7 @@ class ProductController extends BackofficeController
         return redirect(route('bo_product'));
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         Product::query()
             ->find($id)
