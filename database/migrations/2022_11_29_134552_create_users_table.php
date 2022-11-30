@@ -21,8 +21,7 @@ return new class extends Migration
             $table->string('mail')->nullable(false);
             $table->string('phonenumber')->nullable(false);
             $table->date('birthday')->nullable();
-            $table->foreignId('cart_id')->nullable();
-            $table->foreignId('address_id')->nullable();
+            $table->foreignId('address_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
