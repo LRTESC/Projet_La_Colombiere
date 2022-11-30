@@ -1,6 +1,6 @@
 <?php
 
-use \App\Http\Controllers\Backoffice;
+use App\Http\Controllers\Backoffice;
 use App\Http\Controllers\Backoffice\BackofficeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;

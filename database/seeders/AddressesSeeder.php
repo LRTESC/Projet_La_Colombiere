@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-
-use App\Models\Product;
+use App\Models\Address;
 use Illuminate\Database\Seeder;
 
-class ProductSeeder extends Seeder
+class AddressesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +14,8 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        Product::truncate();
+        Address::truncate();
 
-        Product::factory()
-            ->count(100)
-            ->create();
+        Address::factory(5)->create();
     }
 }

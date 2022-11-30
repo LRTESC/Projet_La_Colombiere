@@ -2,13 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<Product>
+ * @extends Factory<Category>
  */
-class ProductFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,9 +19,8 @@ class ProductFactory extends Factory
     {
         return [
             'name' => fake()->word,
-            'description' => fake()->sentence,
-            'price' => fake()->randomFloat(2,0,2000),
-            'available' => fake()->boolean
+            'slug' => fake()->slug,
+            'description' => fake()->paragraph
         ];
     }
 }
