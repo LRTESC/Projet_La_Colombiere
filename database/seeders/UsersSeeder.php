@@ -14,8 +14,6 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        User::truncate();
-        
         User::factory(5)->create();
     }
 }
