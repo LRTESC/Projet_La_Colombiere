@@ -50,8 +50,8 @@ Route::get('/categories', [CategoryController::class, 'index'])->name('categorie
 Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('cat_id');
 
 /* Carts */
-Route::get('/carts', [CartController::class, 'index'])->name('carts');
-Route::get('/carts/{id}', [CartController::class, 'show'])->name('cart_id');
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
+Route::get('/cart/{id}', [CartController::class, 'show'])->name('cart_id');
 
 /* Users */
 

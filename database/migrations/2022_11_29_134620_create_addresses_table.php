@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('zipcode')->nullable(false);
             $table->string('city')->nullable(false);
             $table->string('country')->nullable(false);
+            $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

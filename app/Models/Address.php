@@ -10,4 +10,9 @@ class Address extends Model
     use HasFactory;
 
     protected $guarded = ['_token', '_method'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

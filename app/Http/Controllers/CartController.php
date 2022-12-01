@@ -9,7 +9,7 @@ class CartController extends Controller
 {
     public function index()
     {
-        $carts = Cart::query()->get();
+        $carts = Cart::query()->with(['products'])->get();
         return view('cart', [
             'css' => 'cart',
             'carts' => $carts

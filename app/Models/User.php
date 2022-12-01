@@ -10,4 +10,14 @@ class User extends Model
     use HasFactory;
 
     protected $guarded = ['_token', '_method'];
+
+    public function address()
+    {
+        return $this->hasOne(Address::class);
+    }
+
+    public function carts()
+    {
+        return $this->belongsTo(Cart::class);
+    }
 }
