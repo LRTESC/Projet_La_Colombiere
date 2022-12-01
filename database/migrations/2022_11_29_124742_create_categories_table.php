@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unique();
             $table->string('name')->nullable(false);
-            $table->string('slug')->nullable(false);
+            $table->string('slug')->nullable(false)->unique();
             $table->longText('description')->nullable();
             $table->timestamps();
         });

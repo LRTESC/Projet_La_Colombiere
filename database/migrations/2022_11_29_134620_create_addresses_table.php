@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('addresses', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unique();
             $table->string('name_address')->nullable()->default('address_');
             $table->string('company')->nullable();
             $table->text('address')->nullable(false);
