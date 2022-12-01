@@ -2,23 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
-    public function show()
+    public function index()
     {
-//            return view("product-list",['css' => 'product-list']);
-        $products = DB::select('select * from Product where idProduct <= ?',[8]);
         return view('product-list', [
             'css' => 'product-list',
-            'products' => $products
+            'products' => Product::query()->with('category')->get()
         ]);
     }
-    public function id(Product $id)
+
+    public function show(Product $id)
     {
-            return view("product-details",['id' => $id, 'css' => 'product-details']);
+        return view("product-details", [
+            'id' => $id,
+            'css' => 'product-details'
+        ]);
     }
 }

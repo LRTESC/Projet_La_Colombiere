@@ -19,9 +19,10 @@ return new class extends Migration
             $table->string('company')->nullable();
             $table->text('address')->nullable(false);
             $table->string('additional')->nullable();
-            $table->integer('zipcode')->nullable(false);
+            $table->string('zipcode')->nullable(false);
             $table->string('city')->nullable(false);
             $table->string('country')->nullable(false);
+            $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

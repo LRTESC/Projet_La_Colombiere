@@ -14,8 +14,6 @@ class AddressesSeeder extends Seeder
      */
     public function run()
     {
-        Address::truncate();
-
         Address::factory(5)->create();
     }
 }

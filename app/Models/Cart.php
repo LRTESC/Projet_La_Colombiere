@@ -9,4 +9,15 @@ class Cart extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['_token', '_method'];
+
+    public function user()
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class)->withPivot('price', 'quantity');
+    }
 }

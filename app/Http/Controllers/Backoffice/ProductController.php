@@ -13,14 +13,14 @@ class ProductController extends BackofficeController
     {
         return view('backoffice.product.index', [
             'css' => 'backoffice',
-            'products' => Product::query()
-                ->get()
+            'products' => Product::query()->with('category')->get()
         ]);
     }
 
     public function create(Request $request)
     {
-        if (!Product::create($request->post())){
+
+        if (!Product::create($request->post())) {
             abort(404);
         }
         return redirect(route('bo_product'));
@@ -46,7 +46,7 @@ class ProductController extends BackofficeController
         return redirect(route('bo_product'));
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         Product::query()
             ->find($id)

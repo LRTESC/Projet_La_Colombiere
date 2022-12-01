@@ -79,18 +79,18 @@
             @foreach ($products as $product)
                 <div class="product-c">
                     <div class="img-space-around">
-                        <img class="img-space-product" src="{{asset('storage/pictures/Product' . $product->idProduct . '.webp')}}" alt="Product">
+                        <img class="img-space-product" src="{{asset('storage/pictures/Product' . $product->id . '.webp')}}" alt="Product">
                     </div>
                     <div class="product-d-1">
                             <h4 class="title-product-btmp">
-                                {{$product->Name}}
+                                {{$product->name}}
                             </h4>
-                            {!! $product->Description !!}
+                            {!! $product->description !!}
                             <h4 class="price-product-list">
-                                {{$product->Price . ' €'}}
+                                {{$product->price . ' €'}}
                             </h4>
                             <div class="div-button">
-                                <a href="{{route('productid',['id' => $product->idProduct])}}"><button class="buy-button-product">ACHETER</button></a>
+                                <a href="{{route('productid',['id' => $product->id])}}"><button class="buy-button-product">ACHETER</button></a>
                             </div>
                     </div>
                 </div>
@@ -98,12 +98,5 @@
 
         </div>
     </section>
-
-
-
-{{--<span><?php--}}
-{{--      $db = \Illuminate\Support\Facades\DB::table('Product')->where('idProduct', 1)->first();--}}
-{{--      echo $db->Name;--}}
-{{--      ?></span>--}}
 
 @include('includes.footer')

@@ -14,8 +14,6 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        Category::truncate();
-
         Category::factory(5)->create();
     }
 }

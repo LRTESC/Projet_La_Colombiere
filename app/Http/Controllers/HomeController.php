@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function show()
+    public function index()
     {
         return view("homepage",['css' => 'homepage',]);
+    }
+    public function show($page)
+    {
+        return view($page,['css' => $page,]);
     }
 }

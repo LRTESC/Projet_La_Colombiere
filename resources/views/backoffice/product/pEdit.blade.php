@@ -67,4 +67,5 @@
         </tr>
         </tfoot>
     </table>
+    <h2>Category name : {{$product->category->name}}</h2>
 </x-backofficelayout>
