@@ -5,6 +5,7 @@
         <tr>
             <th>id</th>
             <th>name</th>
+            <th>html</th>
             <th>description</th>
             <th>price</th>
             <th>picture</th>
@@ -19,16 +20,20 @@
         <tbody class="products_td">
         @foreach($products as $product)
             <tr>
-                <td>{{$product->id}}</td>
+                <td class="bo-available-4">{{$product->id}}</td>
                 <td>{{$product->name}}</td>
                 <td>
                     <details>
-                        <summary>Description</summary>{{$product->description}}
+                        <summary>HTML</summary>{{$product->html}}
                     </details>
                 </td>
+                <td>
+                    <details>
+                        <summary>description</summary>{{$product->description}}
+                    </details></td>
                 <td>{{$product->price}} €</td>
                 <td>{{$product->picture}}</td>
-                <td>{{$product->available}}</td>
+                <td class="bo-available-3">{{$product->available}}</td>
                 <td>{{$product->category_id ? $product->category->name : ''}}</td>
                 <td>{{$product->created_at}}</td>
                 <td>{{$product->updated_at}}</td>
@@ -60,9 +65,11 @@
             <form action="{{route('bo_p_create')}}" method="POST">
                 @csrf
                 @method('POST')
-                <td><input type="number" name="id" placeholder="id"
+                <td ><input class="bo-available-2" type="number" name="id" placeholder="id"
                            value="{{$product->id+1}}" required></td>
                 <td><input type="text" name="name" placeholder="name" required>
+                </td>
+                <td><input type="text" name="html" placeholder="html" required>
                 </td>
                 <td><input type="text" name="description"
                            placeholder="description" required></td>
@@ -70,7 +77,7 @@
                            required></td>
                 <td><input type="text" name="price" placeholder="picture"
                            required></td>
-                <td><input type="text" name="available"
+                <td><input class="bo-available-1" type="text" name="available"
                            placeholder="1 (yes) or 0 (no)" required></td>
                 <td>
                     <select type="select" name="category_id"

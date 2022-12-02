@@ -5,6 +5,7 @@
         <tr>
             <th>id</th>
             <th>name</th>
+            <th>html</th>
             <th>description</th>
             <th>price</th>
             <th>picture</th>
@@ -19,6 +20,7 @@
         <tr>
             <td>{{$product->id}}</td>
             <td>{{$product->name}}</td>
+            <td>{{$product->html}}</td>
             <td>{{$product->description}}</td>
             <td>{{$product->price}} €</td>
             <td>{{$product->picture}}</td>
@@ -48,13 +50,14 @@
             <form action="{{route('bo_p_update',[$product->id])}}" method="POST">
                 @csrf
                 @method('POST')
-                <td><input type="number" name="id" placeholder="id" value="{{$product->id}}" required></td>
+                <td><input class="idwrap" type="number" name="id" placeholder="id" value="{{$product->id}}" required></td>
                 <td><input type="text" name="name" placeholder="name" value="{{$product->name}}" required></td>
-                <td><textarea name="description" placeholder="description" value="{{$product->description}}"
-                           required>{{$product->description}}</textarea></td>
+                <td><textarea name="html" placeholder="html" value="{{$product->description}}"
+                           required>{{$product->html}}</textarea></td>
+                <td><input type="text" name="description" placeholder="description" value="{{$product->description}}" </td>
                 <td><input type="text" name="price" placeholder="price" value="{{$product->price}}" required></td>
                 <td><input type="text" name="picture" placeholder="picture" value="{{$product->picture}}" required></td>
-                <td><input type="text" name="available" placeholder="1 (yes) or 0 (no)" value="{{$product->available}}"
+                <td><input class="availablewrap" type="text" name="available" placeholder="1 (yes) or 0 (no)" value="{{$product->available}}"
                            required></td>
                 <td><input type="datetime-local" name="created_at" value="{{$product->created_at}}" required></td>
                 <td><input type="datetime-local" name="updated_at" value="{{date('Y-m-d H:i:s')}}" required></td>
