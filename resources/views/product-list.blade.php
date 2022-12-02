@@ -94,7 +94,7 @@
                     <h4 class="title-product-btmp">
                         {{$product->name}}
                     </h4>
-                    {!! $product->description !!}
+                    {!! $product->html !!}
                     <h4 class="price-product-list">
                         {{$product->price . ' €'}}
                     </h4>

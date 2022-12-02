@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id()->unique();
             $table->string('name')->nullable();
             $table->longText('description')->nullable();
+            $table->longText('html')->nullable();
             $table->float('price')->default('10.00');
             $table->string('picture')->default('product_default_picture.webp');
             $table->boolean('available')->default(0);
