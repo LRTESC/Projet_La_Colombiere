@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -10,17 +10,19 @@ body {
     width: 100vw;
 }
 
-h1{
+h1 {
     width: 100%;
 }
 
-table.center{
+table.center {
     margin-left: auto;
     margin-right: auto;
 }
+
 table {
     width: 100%;
 }
+
 /*h2 {*/
 /*    height: 10%;*/
 /*    background: #f1f1f1;*/
@@ -36,7 +38,7 @@ table {
 /*    text-transform: uppercase;*/
 /*}*/
 
-.box-icons{
+.box-icons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,26 +48,28 @@ table {
     top: 0;
 }
 
-.bg{
+.bg {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
+
 .stepped-progress__item {
     height: 70vh;
 }
+
 /*.cart{*/
-    /*flex-wrap: wrap;*/
-    /*max-width: 100rem;*/
-    /*padding: 1.25rem;*/
-    /*background-image: url("../pictures/Mon_panier-2.svg");*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
+/*flex-wrap: wrap;*/
+/*max-width: 100rem;*/
+/*padding: 1.25rem;*/
+/*background-image: url("../pictures/Mon_panier-2.svg");*/
+/*background-position: center;*/
+/*background-repeat: no-repeat;*/
 /*}*/
 
-.title__card{
+.title__card {
     background: #ffffff;
     color: #000;
     font-weight: 300;
@@ -83,25 +87,25 @@ div {
     filter: invert(0);
 }
 
-.panier{
+.panier {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-evenly;
 }
 
-.panier img{
+.panier img {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 32px;
 }
 
-.panier h1{
+.panier h1 {
     font-size: 24px;
 }
 
-.panier_wrapper{
+.panier_wrapper {
     border: white .5em solid;
     padding: 5rem;
     margin-top: 0;
@@ -110,14 +114,15 @@ div {
     flex-direction: row;
 }
 
-.products{
+.products {
     background: white;
     margin-top: 0;
     height: 100%;
     width: 60%;
     margin-right: 5rem;
 }
-.title_product{
+
+.title_product {
     background: #f1f1f1;
     height: 10%;
     display: flex;
@@ -131,12 +136,12 @@ div {
     width: 40%;
 }
 
-.syn{
+.syn {
     /*padding: 3rem;*/
     /*height: 100%;*/
 }
 
-.title_options{
+.title_options {
     background: #f1f1f1;
     height: 10%;
     display: flex;
@@ -145,13 +150,13 @@ div {
 
 }
 
-.info_option{
+.info_option {
     font-weight: 500;
     padding: 2rem;
     height: 45%;
 }
 
-.total_command{
+.total_command {
     font-weight: 500;
     padding: 2rem;
     background: #f1f1f1;

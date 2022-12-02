@@ -21,7 +21,11 @@
             <tr>
                 <td>{{$product->id}}</td>
                 <td>{{$product->name}}</td>
-                <td><details><summary>Description</summary>{{$product->description}}</details></td>
+                <td>
+                    <details>
+                        <summary>Description</summary>{{$product->description}}
+                    </details>
+                </td>
                 <td>{{$product->price}} €</td>
                 <td>{{$product->picture}}</td>
                 <td>{{$product->available}}</td>
@@ -31,16 +35,20 @@
                 <td>
                     <a href="{{route('bo_p_edit',[$product->id])}}">
                         <button>
-                            <img src="{{asset('storage/pictures/edit.svg')}}" alt="edit item">
+                            <img src="{{asset('storage/pictures/edit.svg')}}"
+                                 alt="edit item">
                         </button>
                     </a>
                 </td>
                 <td>
-                    <form action="{{route('bo_p_delete',[$product->id])}}" method="POST">
+                    <form action="{{route('bo_p_delete',[$product->id])}}"
+                          method="POST">
                         @csrf
                         @method('DELETE')
                         <button>
-                            <img src="{{asset('storage/pictures/delete_forever.svg')}}" alt="delete item">
+                            <img
+                                src="{{asset('storage/pictures/delete_forever.svg')}}"
+                                alt="delete item">
                         </button>
                     </form>
                 </td>
@@ -52,27 +60,40 @@
             <form action="{{route('bo_p_create')}}" method="POST">
                 @csrf
                 @method('POST')
-                <td><input type="number" name="id" placeholder="id" value="{{$product->id+1}}" required></td>
-                <td><input type="text" name="name" placeholder="name" required></td>
-                <td><input type="text" name="description" placeholder="description" required></td>
-                <td><input type="text" name="price" placeholder="price" required></td>
-                <td><input type="text" name="price" placeholder="picture" required></td>
-                <td><input type="text" name="available" placeholder="1 (yes) or 0 (no)" required></td>
+                <td><input type="number" name="id" placeholder="id"
+                           value="{{$product->id+1}}" required></td>
+                <td><input type="text" name="name" placeholder="name" required>
+                </td>
+                <td><input type="text" name="description"
+                           placeholder="description" required></td>
+                <td><input type="text" name="price" placeholder="price"
+                           required></td>
+                <td><input type="text" name="price" placeholder="picture"
+                           required></td>
+                <td><input type="text" name="available"
+                           placeholder="1 (yes) or 0 (no)" required></td>
                 <td>
-                    <select type="select" name="category_id" placeholder="Category" required>
+                    <select type="select" name="category_id"
+                            placeholder="Category" required>
                         <option value="null">---</option>
                         @foreach(\App\Models\Category::all() as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            <option
+                                value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                     </select>
                 </td>
-                <td><input type="datetime-local" name="created_at" value="{{date('Y-m-d H:i:s')}}" required></td>
-                <td><input type="datetime-local" name="updated_at" value="{{date('Y-m-d H:i:s')}}" required></td>
+                <td><input type="datetime-local" name="created_at"
+                           value="{{date('Y-m-d H:i:s')}}" required></td>
+                <td><input type="datetime-local" name="updated_at"
+                           value="{{date('Y-m-d H:i:s')}}" required></td>
                 <td>
-                    <button><img src="{{asset('storage/pictures/add.svg')}}" alt="Save"></button>
+                    <button><img src="{{asset('storage/pictures/add.svg')}}"
+                                 alt="Save"></button>
                 </td>
                 <td>
-                    <button type="reset"><img src="{{asset('storage/pictures/mop.svg')}}" alt="Clear"></button>
+                    <button type="reset"><img
+                            src="{{asset('storage/pictures/mop.svg')}}"
+                            alt="Clear"></button>
                 </td>
             </form>
         </tr>

@@ -7,19 +7,38 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    public function index()
+
+    public function index(Request $request)
     {
-        $carts = Cart::query()->with(['products'])->get();
+        $cart = Cart::query()
+            ->where([
+                'id' => $request->cookie('cart_id')
+            ])
+            ->with(['products'])
+            ->first();
+
         return view('cart', [
             'css' => 'cart',
-            'carts' => $carts
+            'cart' => $cart
         ]);
     }
-    public function show(Cart $id)
+
+    public function add(Request $request, $id)
     {
-        return view("cart-details",[
-            'css' => 'cart-details',
-            'id' => $id
-        ]);
+        $cookie = $request->cookie('cart_id');
+
+        if (is_null($cookie)) {
+            $cart = new Cart([
+                'user_id' => null
+            ]);
+            if ($cart->save()) {
+                $cookie = cookie('cart_id', $cart->id, 60 * 24 * 7);
+            }
+        }
+
+        // 2. ajouter porduits a cart_product
+
+        return redirect('cart')->cookie($cookie);
     }
+
 }
