@@ -7,6 +7,7 @@
             <th>name</th>
             <th>description</th>
             <th>price</th>
+            <th>picture</th>
             <th>available</th>
             <th>created_at</th>
             <th>updated_at</th>
@@ -20,6 +21,7 @@
             <td>{{$product->name}}</td>
             <td>{{$product->description}}</td>
             <td>{{$product->price}} €</td>
+            <td>{{$product->picture}}</td>
             <td>{{$product->available}}</td>
             <td>{{$product->created_at}}</td>
             <td>{{$product->updated_at}}</td>
@@ -48,9 +50,10 @@
                 @method('POST')
                 <td><input type="number" name="id" placeholder="id" value="{{$product->id}}" required></td>
                 <td><input type="text" name="name" placeholder="name" value="{{$product->name}}" required></td>
-                <td><input type="text" name="description" placeholder="description" value="{{$product->description}}"
-                           required></td>
+                <td><textarea name="description" placeholder="description" value="{{$product->description}}"
+                           required>{{$product->description}}</textarea></td>
                 <td><input type="text" name="price" placeholder="price" value="{{$product->price}}" required></td>
+                <td><input type="text" name="picture" placeholder="picture" value="{{$product->picture}}" required></td>
                 <td><input type="text" name="available" placeholder="1 (yes) or 0 (no)" value="{{$product->available}}"
                            required></td>
                 <td><input type="datetime-local" name="created_at" value="{{$product->created_at}}" required></td>

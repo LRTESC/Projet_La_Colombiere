@@ -77,26 +77,23 @@ a {
 
 .column-product{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
 }
 
-.product-c:first-child{
-    margin-right: 50px;
-    background-color: #ffffff;
-}
 
 .product-c{
-    margin-right: 50px;
     background-color: #ffffff;
+    margin-bottom: 70px;
 }
 
-
-.product-c:last-child{
-    background-color: #ffffff;
-}
 
 .title-product-btmp {
     display: flex;
