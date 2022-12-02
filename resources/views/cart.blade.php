@@ -1,6 +1,6 @@
-{{--@include('includes.head')--}}
+@include('includes.head')
 <div class="bg"
-{{--     style="background-image: url('{{asset('storage/pictures/checkout.webp')}}')">--}}
+     style="background-image: url('{{asset('storage/pictures/checkout.webp')}}')">
     <div class="bg-white">
         <div class="d-flex justify-content-center">
             <img class="logo" src="{{asset('storage/pictures/svg-0.svg')}}">

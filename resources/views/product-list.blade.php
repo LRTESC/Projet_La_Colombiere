@@ -79,7 +79,7 @@
             @foreach ($products as $product)
                 <div class="product-c">
                     <div class="img-space-around">
-                        <img class="img-space-product" src="{{asset('storage/pictures/Product' . $product->id . '.webp')}}" alt="Product">
+                        <img class="img-space-product" src="{{asset('storage/pictures/' . $product->picture)}}" alt="Product">
                     </div>
                     <div class="product-d-1">
                             <h4 class="title-product-btmp">

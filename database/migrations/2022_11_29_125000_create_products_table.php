@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->longText('description')->nullable();
             $table->float('price')->default('10.00');
+            $table->string('picture')->default('product_default_picture.webp');
             $table->boolean('available')->default(0);
             $table->foreignId('category_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();

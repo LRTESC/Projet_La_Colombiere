@@ -7,6 +7,7 @@
             <th>name</th>
             <th>description</th>
             <th>price</th>
+            <th>picture</th>
             <th>available</th>
             <th>category</th>
             <th>created_at</th>
@@ -20,8 +21,9 @@
             <tr>
                 <td>{{$product->id}}</td>
                 <td>{{$product->name}}</td>
-                <td>{{$product->description}}</td>
+                <td><details><summary>Description</summary>{{$product->description}}</details></td>
                 <td>{{$product->price}} €</td>
+                <td>{{$product->picture}}</td>
                 <td>{{$product->available}}</td>
                 <td>{{$product->category_id ? $product->category->name : ''}}</td>
                 <td>{{$product->created_at}}</td>
@@ -54,6 +56,7 @@
                 <td><input type="text" name="name" placeholder="name" required></td>
                 <td><input type="text" name="description" placeholder="description" required></td>
                 <td><input type="text" name="price" placeholder="price" required></td>
+                <td><input type="text" name="price" placeholder="picture" required></td>
                 <td><input type="text" name="available" placeholder="1 (yes) or 0 (no)" required></td>
                 <td>
                     <select type="select" name="category_id" placeholder="Category" required>
