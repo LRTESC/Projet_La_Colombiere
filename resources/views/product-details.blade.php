@@ -26,7 +26,7 @@
             <div>{{$id->price}} €</div>
 
 
-            <a href="{{route('carts', ['carts' => $id])}}">
+            <a href="{{route('cart_id', ['id' => $id])}}">
                 <div>
                     <button class="panier">Ajouter au Panier</button>
                 </div>

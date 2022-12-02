@@ -13,6 +13,10 @@
         </div>
     </div>
     <div class="panier_wrapper">
+
+        @if (is_null($cart))
+            <p>Panier vide. <a href="/">Retourner à l'accueil</a></p>
+        @else:
         <div class="products">
             <div class="title_product">
                 <h2>VOTRE PANIER</h2>
@@ -24,15 +28,13 @@
                     <th>Quantité</th>
                     <th>Sous-total</th>
                 </tr>
-                @foreach ($carts->where('user_id', 1) as $cart)
-                    @foreach($cart->products as $product)
-                        <tr>
-                            <td>{{$product->name}}</td>
-                            <td>{{$product->pivot->price}}</td>
-                            <td>{{$product->pivot->quantity}}</td>
-                            <td>{{$product->pivot->price * $product->pivot->quantity}}</td>
-                        </tr>
-                    @endforeach
+                @foreach($cart->products as $product)
+                    <tr>
+                        <td>{{$product->name}}</td>
+                        <td>{{$product->pivot->price}}</td>
+                        <td>{{$product->pivot->quantity}}</td>
+                        <td>{{$product->pivot->price * $product->pivot->quantity}}</td>
+                    </tr>
                 @endforeach
             </table>
         </div>
@@ -41,18 +43,19 @@
                 <h2 class="syn">SYNTHESE</h2>
             </div>
             <div class="info_option">
-{{--                <p>{{$customer->firstname}} {{$customer->lastname}}</p>--}}
-{{--                <p>{{$customer->Adress}}</p>--}}
+                {{--                <p>{{$customer->firstname}} {{$customer->lastname}}</p>--}}
+                {{--                <p>{{$customer->Adress}}</p>--}}
                 <p>LIVRAISON OFFERTE</p>
                 <p>DATE DE LIVRAISON ESTIMÉE : 25 NOV. 2022</p>
             </div>
             <div class="total_command">
-{{--                <p>TOTAL HT : {{ $cart['total_ht'] }}</p>--}}
-{{--                <p>TVA : {{ $cart['total_tva'] }}</p>--}}
-{{--                <p>TOTAL TTC : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>--}}
+                {{--                <p>TOTAL HT : {{ $cart['total_ht'] }}</p>--}}
+                {{--                <p>TVA : {{ $cart['total_tva'] }}</p>--}}
+                {{--                <p>TOTAL TTC : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>--}}
                 <button>COMMANDER</button>
             </div>
         </div>
+        @endif;
     </div>
 </div>
 @include('includes.footer')
