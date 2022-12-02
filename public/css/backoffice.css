@@ -30,7 +30,7 @@ button {
 
 /* specific */
 .products_table {
-    margin: auto;
+    /*margin: auto;*/
     width: 80%;
     border: #232323 2px solid;
 }
@@ -60,4 +60,30 @@ button {
 tfoot img {
     height: 24px;
     filter: invert(1);
+}
+
+.bo-available-2{
+    width: 48px;
+}
+
+.bo-available-1{
+    width: 60px;
+}
+
+.bo-available-3{
+    display: flex;
+    justify-content: center;
+}
+
+.bo-available-4{
+    display: flex;
+    justify-content: center;
+}
+
+.availablewrap{
+    width: 60px;
+}
+
+.idwrap{
+    width: 48px;
 }
