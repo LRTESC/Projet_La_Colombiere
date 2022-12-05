@@ -27,10 +27,28 @@ use App\Http\Controllers\AddressController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 /* Product */
-Route::get('/product', [ProductController::class, 'index'])->name('product');
+Route::prefix('/product')->group(function () {
+    Route::get(null, [ProductController::class, 'index'])->name('product');
+    Route::get('{id}', [ProductController::class, 'show'])->name('productid');
+});
 
-/* Product ID */
-Route::get('/product/{id}', [ProductController::class, 'show'])->name('productid');
+/* Categories */
+Route::prefix('/categories')->group(function () {
+    Route::get(null, [CategoryController::class, 'index'])->name('categories');
+    Route::get('{id}', [CategoryController::class, 'show'])->name('cat_id');
+});
+
+/* Carts */
+Route::prefix('/cart')->group(function () {
+    Route::get(null, [CartController::class, 'index'])->name('cart');
+    Route::get('{id}', [CartController::class, 'add'])->name('cart_id');
+});
+
+/* Users */
+Route::prefix('/users')->group(function () {
+    Route::get(null, [UserController::class, 'index'])->name('users');
+    Route::get('{id}', [UserController::class, 'show'])->name('user_id');
+});
 
 /* Backoffice */
 Route::prefix('/backoffice')
@@ -44,21 +62,3 @@ Route::prefix('/backoffice/product')->group(function () {
     Route::post('{id}', [Backoffice\ProductController::class, 'update'])->name('bo_p_update');
     Route::delete('{id}\delete', [Backoffice\ProductController::class, 'destroy'])->name('bo_p_delete');
 });
-
-/* Categories */
-Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
-Route::get('/categories/{id}', [CategoryController::class, 'show'])->name('cat_id');
-
-/* Carts */
-Route::get('/cart', [CartController::class, 'index'])->name('cart');
-Route::get('/cart/{id}', [CartController::class, 'add'])->name('cart_id');
-
-/* Users */
-
-Route::get('/users', [UserController::class, 'index'])->name('users');
-Route::get('/users/{id}', [UserController::class, 'show'])->name('user_id');
-
-/* Addresses */
-
-Route::get('/addresses', [AddressController::class, 'index'])->name('addresses');
-Route::get('/addresses/{id}', [AddressController::class, 'show'])->name('address_id');
