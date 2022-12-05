@@ -18,7 +18,7 @@
         <section class='FlexContainer'>
 
             <div><h1>{{$id->name}}</h1></div>
-            <div><h5>{{$id->description}}</h5></div>
+            <div><h5>{!! $id->description !!}</h5></div>
             <div class="mono-stereo">
                 <button>MONO</button>
                 <button>STEREO</button>

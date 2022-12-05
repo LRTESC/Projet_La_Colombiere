@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{asset('css/header.css')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <!-- User CSS -->
-    <link rel="stylesheet" href="{{asset('css/backoffice.css')}}">
+    <link rel="stylesheet" href="{{asset('css/backoffice/backoffice.css')}}">
     <!-- JavaScript -->
     <!-- bootstrap -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

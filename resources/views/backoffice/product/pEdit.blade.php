@@ -59,8 +59,8 @@
                 <td><input type="text" name="picture" placeholder="picture" value="{{$product->picture}}" required></td>
                 <td><input class="availablewrap" type="text" name="available" placeholder="1 (yes) or 0 (no)" value="{{$product->available}}"
                            required></td>
-                <td><input type="datetime-local" name="created_at" value="{{$product->created_at}}" required></td>
-                <td><input type="datetime-local" name="updated_at" value="{{date('Y-m-d H:i:s')}}" required></td>
+                <td><input type="datetime-local" name="created_at" value="{{$product->created_at}}" readonly required></td>
+                <td><input type="datetime-local" name="updated_at" value="{{date('Y-m-d H:i:s')}}" readonly required></td>
                 <td>
                     <button>
                         <img src="{{asset('storage/pictures/save.svg')}}" alt="Save">

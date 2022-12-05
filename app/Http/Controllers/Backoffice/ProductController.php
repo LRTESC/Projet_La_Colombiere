@@ -19,6 +19,15 @@ class ProductController extends BackofficeController
 
     public function create(Request $request)
     {
+        $request->validate([
+            'name' => 'required|max:255',
+            'id' => 'required|integer',
+            'description' => 'required',
+            'price' => 'required|max_digits:5',
+            'available' => 'required|max_digits:1',
+            'category_id' => 'required|integer',
+            'updated_at' => 'required|date',
+            ]);
 
         if (!Product::create($request->post())) {
             abort(404);
