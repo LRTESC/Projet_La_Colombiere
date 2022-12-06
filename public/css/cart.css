@@ -14,6 +14,24 @@ h1 {
     width: 100%;
 }
 
+/* header */
+.menu {
+    color: #232323;
+}
+.menu a {
+    color: #232323;
+}
+.menu a:hover{
+    color: #232323;
+}
+.icons-left p {
+    color: #232323;
+}
+
+.icons-left img {
+    filter: invert(0);
+}
+
 table.center {
     margin-left: auto;
     margin-right: auto;

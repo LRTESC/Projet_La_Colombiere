@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Backoffice;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Exceptions\Handler;
-use Symfony\Component\ErrorHandler\Error\FatalError;
 
 class ProductController extends BackofficeController
 {

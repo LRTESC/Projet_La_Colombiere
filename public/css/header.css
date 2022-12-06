@@ -1,6 +1,9 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+body{
+    overflow-x: hidden;
+}
 a {
     text-decoration: none;
     color: white;
@@ -52,4 +55,8 @@ a:hover {
     margin: 0 1rem;
     height: 24px;
     filter: invert(1);
+}
+.icons-left button{
+    border: none;
+    background: none;
 }

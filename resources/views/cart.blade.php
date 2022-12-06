@@ -1,14 +1,7 @@
 @include('includes.head')
+@include('includes.header')
 <div class="bg"
      style="background-image: url('{{asset('storage/pictures/checkout.webp')}}')">
-    <div class="bg-white">
-        <div class="d-flex justify-content-center">
-            <a href="{{route('home')}}">
-                <img class="logo" src="{{asset('storage/pictures/svg-0.svg')}}">
-            </a>
-
-        </div>
-    </div>
     <div class="bg-light box-icons">
         <div class="panier">
             <img src="{{asset('storage/pictures/Mon_panier-2.svg')}}">
@@ -16,9 +9,9 @@
         </div>
     </div>
     <div class="panier_wrapper">
+
         @if (is_null($cart))
-            <p class="panier_vide">Panier vide.<br><a href="/">Retourner à
-                    l'accueil</a></p>
+            <p>Panier vide. <a href="/">Retourner à l'accueil</a></p>
         @else
             :
             <div class="products">
@@ -47,16 +40,15 @@
                     <h2 class="syn">SYNTHESE</h2>
                 </div>
                 <div class="info_option">
-                    <p>{{$customer->firstname}} {{$customer->lastname}}</p>
-                    <p>{{$customer->Adress}}</p>
+                    {{--                <p>{{$customer->firstname}} {{$customer->lastname}}</p>--}}
+                    {{--                <p>{{$customer->Adress}}</p>--}}
                     <p>LIVRAISON OFFERTE</p>
                     <p>DATE DE LIVRAISON ESTIMÉE : 25 NOV. 2022</p>
                 </div>
                 <div class="total_command">
-                    <p>TOTAL HT : {{ $cart['total_ht'] }}</p>
-                    <p>TVA : {{ $cart['total_tva'] }}</p>
-                    <p>TOTAL TTC
-                        : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>
+                    {{--                <p>TOTAL HT : {{ $cart['total_ht'] }}</p>--}}
+                    {{--                <p>TVA : {{ $cart['total_tva'] }}</p>--}}
+                    {{--                <p>TOTAL TTC : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>--}}
                     <button>COMMANDER</button>
                 </div>
             </div>
