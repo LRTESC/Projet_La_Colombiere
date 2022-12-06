@@ -113,3 +113,16 @@
     text-transform: uppercase;
     margin-top: 1.25rem;
 }
+
+.flash_message{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    backdrop-filter: blur(10px) saturate(2);
+    background: #23232350;
+    border-radius: 10px;
+}
+.flash_message p{
+    color: white;
+    margin: .7rem;
+}

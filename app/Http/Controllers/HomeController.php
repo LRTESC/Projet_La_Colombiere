@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function redirectTo(){
+        return redirect('/');
+    }
     public function index()
     {
         return view("homepage",['css' => 'homepage',]);

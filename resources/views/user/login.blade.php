@@ -1,4 +1,0 @@
-@include('head')
-@include('header')
-
-@include('footer')

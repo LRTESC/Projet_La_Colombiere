@@ -6,6 +6,7 @@ use App\Http\Controllers\Backoffice\BackofficeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\User\RegisterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddressController;
@@ -25,29 +26,40 @@ use App\Http\Controllers\AddressController;
 
 /* Home */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'redirectTo'])->name('home'); // for User login purpose
 
-/* Product */
-Route::prefix('/product')->group(function () {
-    Route::get(null, [ProductController::class, 'index'])->name('product');
-    Route::get('{id}', [ProductController::class, 'show'])->name('productid');
-});
 
-/* Categories */
-Route::prefix('/categories')->group(function () {
-    Route::get(null, [CategoryController::class, 'index'])->name('categories');
-    Route::get('{id}', [CategoryController::class, 'show'])->name('cat_id');
-});
+/* client pages */
+Route::prefix(null)->group(function () {
+    /* Product */
+    Route::prefix('/product')->group(function () {
+        Route::get(null, [ProductController::class, 'index'])->name('product');
+        Route::get('{id}', [ProductController::class, 'show'])->name('productid');
+    });
 
-/* Carts */
-Route::prefix('/cart')->group(function () {
-    Route::get(null, [CartController::class, 'index'])->name('cart');
-    Route::get('{id}', [CartController::class, 'add'])->name('cart_id');
-});
+    /* Categories */
+    Route::prefix('/categories')->group(function () {
+        Route::get(null, [CategoryController::class, 'index'])->name('categories');
+        Route::get('{id}', [CategoryController::class, 'show'])->name('cat_id');
+    });
 
-/* Users */
-Route::prefix('/users')->group(function () {
-    Route::get(null, [UserController::class, 'index'])->name('users');
-    Route::get('{id}', [UserController::class, 'show'])->name('user_id');
+    /* Carts */
+    Route::prefix('/cart')->group(function () {
+        Route::get(null, [CartController::class, 'index'])->name('cart');
+        Route::get('{id}', [CartController::class, 'add'])->name('cart_id');
+    });
+
+    /* Users */
+    Route::prefix('/users')->group(function () {
+        Route::get(null, [UserController::class, 'index'])->name('users');
+        Route::get('{id}', [UserController::class, 'show'])->name('user_id');
+    });
+
+    /* register */
+    Route::prefix('/register')->group(function () {
+        Route::get(null, [RegisterController::class, 'create'])->name('register_create')->middleware('guest');
+        Route::post(null, [RegisterController::class, 'store'])->name('register_store')->middleware('guest');
+    });
 });
 
 /* Backoffice */
@@ -61,4 +73,4 @@ Route::prefix('/backoffice/product')->group(function () {
     Route::post(null, [Backoffice\ProductController::class, 'create'])->name('bo_p_create');
     Route::post('{id}', [Backoffice\ProductController::class, 'update'])->name('bo_p_update');
     Route::delete('{id}\delete', [Backoffice\ProductController::class, 'destroy'])->name('bo_p_delete');
-});
+})->middleware('auth');

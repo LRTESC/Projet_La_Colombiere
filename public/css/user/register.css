@@ -1,0 +1,18 @@
+body{
+    background-color: #232323;
+}
+.register_form_wrapper{
+    width: 100%;
+    background-color: white;
+}
+.register_form{
+    padding: 2rem 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.form_wrapper{
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    border: lightgray 1px solid;
+}

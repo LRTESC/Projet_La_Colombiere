@@ -18,12 +18,13 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'lname'=>fake()->lastName,
-            'fname'=>fake()->firstName,
-            'username'=>fake()->userName,
-            'mail'=>fake()->email,
-            'phonenumber'=>fake()->phoneNumber,
-            'birthday'=>fake()->date(),
+            'lname' => fake('fr_FR')->lastName,
+            'fname' => fake('fr_FR')->firstName,
+            'username' => fake('fr_FR')->userName,
+            'mail' => fake('fr_FR')->email,
+            'password' => fake()->password,
+            'phonenumber' => fake('fr_FR')->phoneNumber,
+            'birthday' => fake('fr_FR')->date(),
         ];
     }
 }

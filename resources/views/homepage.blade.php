@@ -37,5 +37,10 @@
             </div>
         </div>
     </div>
+    @if(session()->has('success'))
+        <div class="flash_message">
+            <p>{{session('success')}}</p>
+        </div>
+    @endif
 </div>
 @include('includes.footer')
