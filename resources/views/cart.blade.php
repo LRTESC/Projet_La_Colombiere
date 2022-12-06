@@ -11,7 +11,8 @@
     <div class="panier_wrapper">
 
         @if (is_null($cart))
-            <p>Panier vide. <a href="/">Retourner à l'accueil</a></p>
+            <p class="panier_vide">Panier vide.<br><a href="/">Retourner à
+                    l'accueil</a></p>
         @else
             :
             <div class="products">
