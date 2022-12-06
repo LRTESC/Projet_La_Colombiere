@@ -36,9 +36,10 @@ class CartController extends Controller
             }
         }
 
-        // 2. ajouter porduits a cart_product
+        // 2. ajouter porduits a cart_product//
 
         return redirect('cart')->cookie($cookie);
     }
+
 
 }

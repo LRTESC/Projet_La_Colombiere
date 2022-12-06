@@ -106,7 +106,7 @@ div {
 }
 
 .panier_wrapper {
-    border: white .5em solid;
+    /*border: white .5em solid;*/
     padding: 5rem;
     margin-top: 0;
     height: 80%;
@@ -161,4 +161,9 @@ div {
     padding: 2rem;
     background: #f1f1f1;
     height: 45%;
+}
+.panier_vide {
+    color: white;
+    text-align: center;
+    width: 100%;
 }

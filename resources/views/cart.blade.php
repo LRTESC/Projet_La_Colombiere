@@ -3,7 +3,10 @@
      style="background-image: url('{{asset('storage/pictures/checkout.webp')}}')">
     <div class="bg-white">
         <div class="d-flex justify-content-center">
-            <img class="logo" src="{{asset('storage/pictures/svg-0.svg')}}">
+            <a href="{{route('home')}}">
+                <img class="logo" src="{{asset('storage/pictures/svg-0.svg')}}">
+            </a>
+
         </div>
     </div>
     <div class="bg-light box-icons">
@@ -13,48 +16,50 @@
         </div>
     </div>
     <div class="panier_wrapper">
-
         @if (is_null($cart))
-            <p>Panier vide. <a href="/">Retourner à l'accueil</a></p>
-        @else:
-        <div class="products">
-            <div class="title_product">
-                <h2>VOTRE PANIER</h2>
-            </div>
-            <table>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prix Unitaire</th>
-                    <th>Quantité</th>
-                    <th>Sous-total</th>
-                </tr>
-                @foreach($cart->products as $product)
+            <p class="panier_vide">Panier vide.<br><a href="/">Retourner à
+                    l'accueil</a></p>
+        @else
+            :
+            <div class="products">
+                <div class="title_product">
+                    <h2>VOTRE PANIER</h2>
+                </div>
+                <table>
                     <tr>
-                        <td>{{$product->name}}</td>
-                        <td>{{$product->pivot->price}}</td>
-                        <td>{{$product->pivot->quantity}}</td>
-                        <td>{{$product->pivot->price * $product->pivot->quantity}}</td>
+                        <th>Nom</th>
+                        <th>Prix Unitaire</th>
+                        <th>Quantité</th>
+                        <th>Sous-total</th>
                     </tr>
-                @endforeach
-            </table>
-        </div>
-        <div class="options">
-            <div class="title_options">
-                <h2 class="syn">SYNTHESE</h2>
+                    @foreach($cart->products as $product)
+                        <tr>
+                            <td>{{$product->name}}</td>
+                            <td>{{$product->pivot->price}}</td>
+                            <td>{{$product->pivot->quantity}}</td>
+                            <td>{{$product->pivot->price * $product->pivot->quantity}}</td>
+                        </tr>
+                    @endforeach
+                </table>
             </div>
-            <div class="info_option">
-                {{--                <p>{{$customer->firstname}} {{$customer->lastname}}</p>--}}
-                {{--                <p>{{$customer->Adress}}</p>--}}
-                <p>LIVRAISON OFFERTE</p>
-                <p>DATE DE LIVRAISON ESTIMÉE : 25 NOV. 2022</p>
+            <div class="options">
+                <div class="title_options">
+                    <h2 class="syn">SYNTHESE</h2>
+                </div>
+                <div class="info_option">
+                    <p>{{$customer->firstname}} {{$customer->lastname}}</p>
+                    <p>{{$customer->Adress}}</p>
+                    <p>LIVRAISON OFFERTE</p>
+                    <p>DATE DE LIVRAISON ESTIMÉE : 25 NOV. 2022</p>
+                </div>
+                <div class="total_command">
+                    <p>TOTAL HT : {{ $cart['total_ht'] }}</p>
+                    <p>TVA : {{ $cart['total_tva'] }}</p>
+                    <p>TOTAL TTC
+                        : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>
+                    <button>COMMANDER</button>
+                </div>
             </div>
-            <div class="total_command">
-                {{--                <p>TOTAL HT : {{ $cart['total_ht'] }}</p>--}}
-                {{--                <p>TVA : {{ $cart['total_tva'] }}</p>--}}
-                {{--                <p>TOTAL TTC : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>--}}
-                <button>COMMANDER</button>
-            </div>
-        </div>
         @endif;
     </div>
 </div>
