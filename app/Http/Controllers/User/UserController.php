@@ -47,28 +47,34 @@ class UserController extends Controller
     {
         $id = $request->post('id');
 
+        $attributes = [
+            'id' => $id,
+            'password' => $request->post('password')
+            ];
+
         if (is_null($id)) {
             throw ValidationException::withMessages(['id' => 'The User field is required.']);
         }
 
         if (User::query()->where('username', '=', $id)->exists()) {
-            $request->validate([
-                'password' => 'required'
-            ]);
             $attributes = [
                 'username' => $request->post('id'),
                 'password' => $request->post('password')
             ];
-        }
-
-        if (User::query()->where('mail', '=', $id)->exists()) {
             $request->validate([
                 'password' => 'required'
             ]);
+        }
+
+        if (User::query()->where('mail', '=', $id)->exists()) {
             $attributes = [
                 'mail' => $request->post('id'),
                 'password' => $request->post('password')
             ];
+
+            $request->validate([
+                'password' => 'required'
+            ]);
         }
 
         if (auth()->attempt($attributes)) {

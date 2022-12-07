@@ -46,6 +46,7 @@ Route::prefix(null)->group(function () {
     /* Carts */
     Route::prefix('cart')->group(function () {
         Route::get(null, [CartController::class, 'index'])->name('cart');
+        Route::post(null, [CartController::class, 'create'])->name('cart_create');
         Route::get('{id}', [CartController::class, 'add'])->name('cart_id');
     });
 
