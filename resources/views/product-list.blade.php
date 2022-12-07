@@ -5,8 +5,8 @@
 <section>
     <div>
         <video autoplay loop muted preload="auto" class="twic-poster-done">
-            <source src="{{asset('storage/movies/Phantom_I_Hero_Video_3.mp4')}}"
-                    type="video/mp4"/>
+                        <source src="{{asset('storage/movies/Phantom_I_Hero_Video_3.mp4')}}"
+            type="video/mp4"/>
         </video>
     </div>
 </section>
@@ -67,8 +67,8 @@
 
 
 <section>
-    <img class="barrespec" src="{{asset('storage/pictures/barrespec.png')}}"
-         alt="barrespec">
+        <img class="barrespec" src="{{asset('storage/pictures/barrespec.png')}}"
+    alt="barrespec">
 </section>
 
 

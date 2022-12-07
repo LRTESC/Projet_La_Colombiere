@@ -9,7 +9,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\User\RegisterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AddressController;
+
+//use App\Http\Controllers\AddressController;
 
 
 /*
@@ -37,6 +38,30 @@ Route::prefix(null)->group(function () {
         Route::get('{id}', [ProductController::class, 'show'])->name('productid');
     });
 
+    /* Carts */
+    Route::prefix('cart')->group(function () {
+        Route::get(null, [CartController::class, 'index'])->name('cart');
+        Route::get('{id}', [CartController::class, 'add'])->name('cart_id');
+    });
+
+    /* register */
+    Route::prefix('register')->group(function () {
+        Route::get(null, [RegisterController::class, 'create'])->name('register_create')->middleware('guest');
+        Route::post(null, [RegisterController::class, 'store'])->name('register_store')->middleware('guest');
+    });
+
+    /* Session User */
+    Route::get('login', [App\Http\Controllers\User\UserController::class, 'create'])->name('login')->middleware('guest');
+    Route::post('login', [App\Http\Controllers\User\UserController::class, 'store'])->name('login_form')->middleware('guest');
+    Route::post('logout', [App\Http\Controllers\User\UserController::class, 'logout'])->name('logout')->middleware('auth');
+
+});
+
+/* Backoffice */
+Route::prefix('/backoffice')->group(function () {
+    Route::get(null, [BackofficeController::class, 'index'])->name('backoffice');
+    Route::get('product', [Backoffice\ProductController::class, 'index'])->name('bo_product');
+
     /* Categories */
     Route::prefix('categories')->group(function () {
         Route::get(null, [CategoryController::class, 'index'])->name('categories');
@@ -54,23 +79,6 @@ Route::prefix(null)->group(function () {
         Route::get(null, [UserController::class, 'index'])->name('users');
         Route::get('{id}', [UserController::class, 'show'])->name('user_id');
     });
-
-    /* register */
-    Route::prefix('register')->group(function () {
-        Route::get(null, [RegisterController::class, 'create'])->name('register_create')->middleware('guest');
-        Route::post(null, [RegisterController::class, 'store'])->name('register_store')->middleware('guest');
-    });
-
-    /* Session User */
-    Route::get('login', [App\Http\Controllers\User\UserController::class, 'create'])->name('login')->middleware('guest');
-    Route::post('login', [App\Http\Controllers\User\UserController::class, 'store'])->name('login_form')->middleware('guest');
-    Route::post('logout', [App\Http\Controllers\User\UserController::class, 'logout'])->name('logout')->middleware('auth');
-});
-
-/* Backoffice */
-Route::prefix('/backoffice')->group(function () {
-    Route::get(null, [BackofficeController::class, 'index'])->name('backoffice');
-    Route::get('product', [Backoffice\ProductController::class, 'index'])->name('bo_product');
 });
 Route::prefix('/backoffice/product')->group(function () {
     Route::get('{id}', [Backoffice\ProductController::class, 'edit'])->name('bo_p_edit');

@@ -17,7 +17,6 @@
                     <span class="hero__titles__subtitle">en tout point.</span>
                 </h1>
             </div>
-            <a href="{{route("product")}}">
                 <div class="hero_btn">
                     <span>Découvrir</span>
                 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -36,7 +37,8 @@ class CartController extends Controller
             }
         }
 
-        // 2. ajouter porduits a cart_product//
+        // 2. ajouter porduits a cart_product //
+
 
         return redirect('cart')->cookie($cookie);
     }

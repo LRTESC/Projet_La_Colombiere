@@ -41,15 +41,15 @@
                     <h2 class="syn">SYNTHESE</h2>
                 </div>
                 <div class="info_option">
-                    {{--                <p>{{$customer->firstname}} {{$customer->lastname}}</p>--}}
-                    {{--                <p>{{$customer->Adress}}</p>--}}
+{{--                                    <p>{{$customer->firstname}} {{$customer->lastname}}</p>--}}
+{{--                                    <p>{{$customer->Adress}}</p>--}}
                     <p>LIVRAISON OFFERTE</p>
-                    <p>DATE DE LIVRAISON ESTIMÉE : 25 NOV. 2022</p>
+                    <p>DATE DE LIVRAISON ESTIMÉE : 25 DEC. 2022</p>
                 </div>
                 <div class="total_command">
-                    {{--                <p>TOTAL HT : {{ $cart['total_ht'] }}</p>--}}
-                    {{--                <p>TVA : {{ $cart['total_tva'] }}</p>--}}
-                    {{--                <p>TOTAL TTC : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>--}}
+{{--                                    <p>TOTAL HT : {{ $cart['total_ht'] }}</p>--}}
+{{--                                    <p>TVA : {{ $cart['total_tva'] }}</p>--}}
+{{--                                    <p>TOTAL TTC : {{ $cart['total_ht'] + $cart['total_tva'] }}</p>--}}
                     <button>COMMANDER</button>
                 </div>
             </div>

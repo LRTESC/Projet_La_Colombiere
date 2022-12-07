@@ -1,4 +1,5 @@
 <x-backofficelayout>
+
     <h1>Backoffice</h1>
     <table class="products_table">
         <thead class="products_th">
