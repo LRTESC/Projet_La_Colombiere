@@ -9,7 +9,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['_token', '_method'];
+    protected $guarded = [];
 
     public function category()
     {

@@ -70,12 +70,12 @@ Route::prefix(null)->group(function () {
 
 /* Backoffice */
 Route::prefix('/backoffice')->group(function () {
-    Route::get(null, [BackofficeController::class, 'index'])->name('backoffice');
-    Route::get('product', [Backoffice\ProductController::class, 'index'])->name('bo_product');
-});
+    Route::get(null, [BackofficeController::class, 'index'])->name('backoffice')->middleware('auth');
+    Route::get('product', [Backoffice\ProductController::class, 'index'])->name('bo_product')->middleware('auth');
+})->middleware('auth');
 Route::prefix('/backoffice/product')->group(function () {
-    Route::get('{id}', [Backoffice\ProductController::class, 'edit'])->name('bo_p_edit');
-    Route::post(null, [Backoffice\ProductController::class, 'create'])->name('bo_p_create');
-    Route::post('{id}', [Backoffice\ProductController::class, 'update'])->name('bo_p_update');
-    Route::delete('{id}\delete', [Backoffice\ProductController::class, 'destroy'])->name('bo_p_delete');
+    Route::get('{id}', [Backoffice\ProductController::class, 'edit'])->name('bo_p_edit')->middleware('auth');
+    Route::post(null, [Backoffice\ProductController::class, 'create'])->name('bo_p_create')->middleware('auth');
+    Route::post('{id}', [Backoffice\ProductController::class, 'update'])->name('bo_p_update')->middleware('auth');
+    Route::delete('{id}\delete', [Backoffice\ProductController::class, 'destroy'])->name('bo_p_delete')->middleware('auth');
 })->middleware('auth');

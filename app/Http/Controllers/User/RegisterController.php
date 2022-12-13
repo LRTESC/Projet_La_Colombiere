@@ -45,7 +45,10 @@ class RegisterController extends Controller
         ]);
 
         $user = User::create($request->post());
-
+        $token = $user->createToken('API access to '.$user->username);
+        $user->fill([
+            'pttoken' => $token->plainTextToken,
+        ])->save();
         auth()->login($user);
 
         return redirect('/')->with('success','Your account has been created.');
