@@ -14,7 +14,7 @@
                 <h1 class="h1">
                     <span class="hero__titles__title">Monumental</span>
                     <br>
-                    <span class="hero__titles__subtitle">en tout point.</span>
+                    <span class="hero__titles__subtitle">en tout point. 2</span>
                 </h1>
             </div>
             <a href="{{route("product")}}">
