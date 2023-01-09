@@ -1,0 +1,42 @@
+name: DEV Deploy
+    
+    on:
+      workflow_dispatch:
+    
+    jobs:
+    
+      deploy:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+    
+          - name: Deployment
+    
+            uses: appleboy/ssh-action@master
+    
+            with:
+              host: ${{ secrets.HOST }}
+              username: ${{ secrets.USERNAME }}
+              key: ${{ secrets.KEY }}
+    
+              script: |
+                cd /var/www/laravel_dev
+                
+                php artisan down
+                
+                git checkout -f
+                git branch -u origin/dev
+                git pull
+                
+                composer install --optimize-autoloader --no-dev
+                
+                npm install
+                npm update
+                npm run production
+                
+                php artisan cache:clear
+                php artisan view:clear
+                php artisan config:cache
+                php artisan up
