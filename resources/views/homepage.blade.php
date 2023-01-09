@@ -14,7 +14,7 @@
                 <h1 class="h1">
                     <span class="hero__titles__title">Monumental</span>
                     <br>
-                    <span class="hero__titles__subtitle">oui oui monumental</span>
+                    <span class="hero__titles__subtitle">dev test</span>
                 </h1>
             </div>
             <a href="{{route("product")}}">
