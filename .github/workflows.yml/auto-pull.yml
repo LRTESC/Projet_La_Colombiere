@@ -22,7 +22,7 @@ name: DEV Deploy
               key: ${{ secrets.KEY }}
     
               script: |
-                cd /var/www/laravel_dev
+                cd /var/www/laravel/
                 
                 php artisan down
                 
